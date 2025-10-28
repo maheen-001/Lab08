@@ -38,4 +38,24 @@ public class CustomListTest {
         assertTrue(customList.hasCity(second));
     }
 
+    // Test for countCities()
+    @Test
+    public void testCountCities() {
+        CustomList customList = new CustomList();
+
+        // no cities added, so the list should be empty (0 elements)
+        assertEquals(0, customList.countCities());
+
+        // add two cities and count
+        City first = new City("Edmonton", "Alberta");
+        City second = new City("Calgary", "Alberta");
+        customList.addCity(first);
+        customList.addCity(second);
+        assertEquals(2, customList.countCities());
+
+        // delete a city, and count again
+        customList.deleteCity(second);
+        assertEquals(1, customList.countCities());
+    }
+
 }
