@@ -25,7 +25,7 @@ public class CustomList {
     // use the same TDD process for deleteCity and countCities
     public void deleteCity(City city) {
         // implement functionality AFTER red phase
-
+        cities.remove(city);
     }
 
 }
