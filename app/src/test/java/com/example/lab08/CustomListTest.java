@@ -4,6 +4,7 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 public class CustomListTest {
 
+    // Test for hasCity()
     @Test
     public void testHasCity() {
         CustomList customList = new CustomList();
@@ -16,6 +17,25 @@ public class CustomListTest {
         // should be false for a city that wasn't added
         City fakeCity = new City("Calgary", "Alberta");
         assertFalse(customList.hasCity(fakeCity));
+    }
+
+    // Test for deleteCity()
+    @Test
+    public void testDeleteCity() {
+        CustomList customList = new CustomList();
+
+        // add cities
+        City first = new City("Edmonton", "Alberta");
+        City second = new City("Calgary", "Alberta");
+        customList.addCity(first);
+        customList.addCity(second);
+
+        // delete a city
+        customList.deleteCity(first);
+
+        // Shouldn't have Edmonton, but should still have Calgary
+        assertFalse(customList.hasCity(first));
+        assertTrue(customList.hasCity(second));
     }
 
 }

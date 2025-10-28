@@ -21,4 +21,11 @@ public class CustomList {
     public boolean hasCity(City city) {
         return cities.contains(city);
     }
+
+    // use the same TDD process for deleteCity and countCities
+    public void deleteCity(City city) {
+        // implement functionality AFTER red phase
+
+    }
+
 }
