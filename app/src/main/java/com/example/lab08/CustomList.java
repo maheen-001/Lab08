@@ -28,4 +28,9 @@ public class CustomList {
         cities.remove(city);
     }
 
+    public int countCities() {
+        // also implement functionality AFTER red phase
+        return cities.size();
+    }
+
 }
