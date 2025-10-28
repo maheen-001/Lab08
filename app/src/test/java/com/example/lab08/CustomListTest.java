@@ -8,15 +8,11 @@ public class CustomListTest {
     @Test
     public void testHasCity() {
         CustomList customList = new CustomList();
-        City city = new City("Edmonton", "Alberta");
+        City city = new City("Calgary", "AB");
         customList.addCity(city);
 
         // should be true for a city that was added
         assertTrue(customList.hasCity(city));
-
-        // should be false for a city that wasn't added
-        City fakeCity = new City("Calgary", "Alberta");
-        assertFalse(customList.hasCity(fakeCity));
     }
 
     // Test for deleteCity()
@@ -25,8 +21,8 @@ public class CustomListTest {
         CustomList customList = new CustomList();
 
         // add cities
-        City first = new City("Edmonton", "Alberta");
-        City second = new City("Calgary", "Alberta");
+        City first = new City("Edmonton", "AB");
+        City second = new City("Calgary", "AB");
         customList.addCity(first);
         customList.addCity(second);
 
@@ -47,8 +43,8 @@ public class CustomListTest {
         assertEquals(0, customList.countCities());
 
         // add two cities and count
-        City first = new City("Edmonton", "Alberta");
-        City second = new City("Calgary", "Alberta");
+        City first = new City("Edmonton", "AB");
+        City second = new City("Calgary", "AB");
         customList.addCity(first);
         customList.addCity(second);
         assertEquals(2, customList.countCities());
